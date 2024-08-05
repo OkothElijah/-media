@@ -1,0 +1,41 @@
+.parent {
+  border: 2px solid red;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.parent:hover .child {
+  animation-play-state: paused;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: orangered;
+  animation: left-to-right 1s ease-in forwards infinite alternate;
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    background-color: blueviolet;
+    transform: translateY(100%);
+  }
+
+  50% {
+    background-color: pink;
+  }
+
+  66% {
+    background-color: yellowgreen;
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    background-color: red;
+    transform: translateX(100%);
+  }
+}
